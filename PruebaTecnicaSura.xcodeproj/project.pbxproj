@@ -30,6 +30,8 @@
 		46E39B6929274F6700034034 /* MovieSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E39B6529274F6700034034 /* MovieSearchState.swift */; };
 		46E39B6A29274F6700034034 /* MovieDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E39B6629274F6700034034 /* MovieDetailState.swift */; };
 		46E39B6C29274FAC00034034 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E39B6B29274FAC00034034 /* Utils.swift */; };
+		46E39B702928051D00034034 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E39B6F2928051C00034034 /* AccountView.swift */; };
+		46E39B722928056700034034 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E39B712928056700034034 /* UserDefaultsHelper.swift */; };
 		729F922C6F40C56B433185B2 /* Pods_PruebaTecnicaSura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA644F7132C5C285D1560EBE /* Pods_PruebaTecnicaSura.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		46E39B6529274F6700034034 /* MovieSearchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchState.swift; sourceTree = "<group>"; };
 		46E39B6629274F6700034034 /* MovieDetailState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailState.swift; sourceTree = "<group>"; };
 		46E39B6B29274FAC00034034 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		46E39B6F2928051C00034034 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		46E39B712928056700034034 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		AFAA1BD3FC121ACCE9C4EB26 /* Pods-PruebaTecnicaSura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTecnicaSura.release.xcconfig"; path = "Target Support Files/Pods-PruebaTecnicaSura/Pods-PruebaTecnicaSura.release.xcconfig"; sourceTree = "<group>"; };
 		BA644F7132C5C285D1560EBE /* Pods_PruebaTecnicaSura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaTecnicaSura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				46E39B3C2925CD0E00034034 /* MainView.swift */,
+				46E39B6F2928051C00034034 /* AccountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		46E39B6E2927595E00034034 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				46E39B712928056700034034 /* UserDefaultsHelper.swift */,
 				46E39B6B29274FAC00034034 /* Utils.swift */,
 				46E39B2D2925BFF200034034 /* Extension.swift */,
 			);
@@ -369,6 +375,8 @@
 				46E39B222925ABA600034034 /* LogInView.swift in Sources */,
 				46E39B6729274F6700034034 /* MovieListState.swift in Sources */,
 				46E39B4E29274EE300034034 /* MovieBackdropCard.swift in Sources */,
+				46E39B722928056700034034 /* UserDefaultsHelper.swift in Sources */,
+				46E39B702928051D00034034 /* AccountView.swift in Sources */,
 				46E39B202925ABA600034034 /* PruebaTecnicaSuraApp.swift in Sources */,
 				46E39B6129274F4100034034 /* Movie.swift in Sources */,
 			);

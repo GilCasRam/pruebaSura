@@ -11,7 +11,8 @@ import FirebaseAuth
 class LogInViewMoel: ObservableObject {
     
     let auth = Auth.auth()
-    @Published var signedIn = false 
+    @Published var signedIn = false
+    @Published var error = false
     @Published var success = false
     var isSignedIn: Bool {
         return auth.currentUser != nil
@@ -21,6 +22,7 @@ class LogInViewMoel: ObservableObject {
         auth.signIn(withEmail: email, password: password){ [weak self] result, error in
             
             guard result != nil , error == nil else {
+                self?.error = true
                 return
             }
             

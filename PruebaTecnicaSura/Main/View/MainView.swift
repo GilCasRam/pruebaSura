@@ -23,8 +23,8 @@ struct MainView: View {
                 Text("Movie app")
                 Spacer()
                 Menu{
-                    Button("Cerrar sesion", action: logOut)
                     Button("Menu", action: showProfile)
+                    Button("Cerrar sesion", action: logOut)
                 } label: {
                     Image(systemName: "line.3.horizontal")
                 }
@@ -75,7 +75,7 @@ struct MainView: View {
             
             NavigationLink(isActive: $showMenu,
             destination: {
-                Text("Menu")
+                AccountView()
             }, label: {
                 
             })
@@ -87,6 +87,9 @@ struct MainView: View {
             self.upcomingState.loadMovies(with: .upcoming)
             self.topRatedState.loadMovies(with: .topRated)
             self.popularState.loadMovies(with: .popular)
+        }
+        .onReceive(viewModel.$signedIn){ response in
+           
         }
     }
     func logOut() {

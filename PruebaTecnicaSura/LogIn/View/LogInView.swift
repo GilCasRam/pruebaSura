@@ -13,7 +13,8 @@ struct LogInView: View {
     
     @State private var email: String = String()
     @State private var password: String = String()
-    @State var showPassword: Bool = false
+    @State var showPassword: Bool = Bool()
+    @State var showAlert: Bool = false
     var body: some View {
         
         VStack{
@@ -80,9 +81,20 @@ struct LogInView: View {
         }//VStack
         .background(
             Color.init(hex: "0D243F")
-            
         )
         .ignoresSafeArea()
+        .onReceive(logInVM.$signedIn){ response in
+            UserDefaultsHelper.setData(value: email, key: .email)
+        }
+        .onReceive(logInVM.$error){ response in
+            if response == true {
+                showAlert = true
+            }
+        }
+        .alert(Text("Contraseña o usuario incorrecto"), isPresented: $showAlert, actions: {
+            Button("Aceptar", role: .cancel) {}
+            
+        })
         
     }
 }
