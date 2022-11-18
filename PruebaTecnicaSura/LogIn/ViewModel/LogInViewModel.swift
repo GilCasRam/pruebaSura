@@ -12,7 +12,7 @@ class LogInViewMoel: ObservableObject {
     
     let auth = Auth.auth()
     @Published var signedIn = false 
-    
+    @Published var success = false
     var isSignedIn: Bool {
         return auth.currentUser != nil
     }
@@ -38,7 +38,7 @@ class LogInViewMoel: ObservableObject {
             }
             
             DispatchQueue.main.async{
-                self?.signedIn = true
+                self?.success = true
             }
         }
     }

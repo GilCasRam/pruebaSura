@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var logInVM: LogInViewMoel
     
     @State private var email: String = String()
     @State private var password: String = String()
+    @State var showAlert: Bool = false
     var body: some View {
         
         VStack{
@@ -55,6 +57,15 @@ struct SignUpView: View {
             Color.init(hex: "0D243F")
                 .ignoresSafeArea()
         )
+        .alert(Text("Registro exitoso"), isPresented: $showAlert, actions: {
+            Button("Aceptar") {presentationMode.wrappedValue.dismiss()}
+            
+        })
+        .onReceive(logInVM.$success, perform: { success in
+            if success {
+                showAlert = true
+            }
+        })
    
         .navigationBarTitleDisplayMode(.inline)
         .navigationViewStyle(StackNavigationViewStyle())
